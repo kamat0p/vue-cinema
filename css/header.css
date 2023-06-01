@@ -82,7 +82,7 @@
     position: absolute;
     bottom: -42px;
     left: 50%;
-    transform: translateX(-50px);
+    transform: translateX(-50%);
     width: 0%;
     height: 3px;
     background: var(--or);
@@ -94,3 +94,23 @@
     width: 100%;
 }
 
+@media screen and (max-width:768px) {
+    .navbar__wrap {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .navbar__list-item {
+        padding: 20px 0px;
+    }
+
+    .navbar__list-item-link::after {
+        bottom: -20px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .navbar__list {
+        gap: 15px;
+    }
+}
